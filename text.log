@@ -1,0 +1,301 @@
+Available Benchmark:
+  #0 BechmarkClass
+
+
+You should select the target benchmark(s). Please, print a number of a benchmark (e.g. `0`) or a contained benchmark caption (e.g. `BechmarkClass`).
+If you want to select few, please separate them with space ` ` (e.g. `1 2 3`).
+You can also provide the class name in console arguments by using --filter. (e.g. `--filter *BechmarkClass*`).
+
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\akradioman3\source\repos\HashSet\bin\Release\netcoreapp3.1\50b50d8b-a2f2-422f-b220-7895e611aaf1
+// command took 1,68s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\akradioman3\source\repos\HashSet\bin\Release\netcoreapp3.1\50b50d8b-a2f2-422f-b220-7895e611aaf1
+// command took 2,58s and exited with 0
+// ***** Done, took 00:00:04 (4.38 sec)   *****
+// Found 2 benchmarks:
+//   BechmarkClass.'Search for a string in an array of strings ': DefaultJob
+//   BechmarkClass.'Search for a string in a hashSet ': DefaultJob
+
+// **************************
+// Benchmark: BechmarkClass.'Search for a string in an array of strings ': DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "50b50d8b-a2f2-422f-b220-7895e611aaf1.dll" --benchmarkName "HashSet.BechmarkClass.SearchString" --job "Default" --benchmarkId 0 in C:\Users\akradioman3\source\repos\HashSet\bin\Release\netcoreapp3.1\50b50d8b-a2f2-422f-b220-7895e611aaf1\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 252400.00 ns, 252.4000 us/op
+WorkloadJitting  1: 1 op, 12678500.00 ns, 12.6785 ms/op
+
+OverheadJitting  2: 16 op, 250000.00 ns, 15.6250 us/op
+WorkloadJitting  2: 16 op, 1125200.00 ns, 70.3250 us/op
+
+WorkloadPilot    1: 16 op, 897800.00 ns, 56.1125 us/op
+WorkloadPilot    2: 32 op, 1794500.00 ns, 56.0781 us/op
+WorkloadPilot    3: 64 op, 3656400.00 ns, 57.1313 us/op
+WorkloadPilot    4: 128 op, 7175700.00 ns, 56.0602 us/op
+WorkloadPilot    5: 256 op, 14398700.00 ns, 56.2449 us/op
+WorkloadPilot    6: 512 op, 28851100.00 ns, 56.3498 us/op
+WorkloadPilot    7: 1024 op, 58051100.00 ns, 56.6905 us/op
+WorkloadPilot    8: 2048 op, 111890600.00 ns, 54.6341 us/op
+WorkloadPilot    9: 4096 op, 220534400.00 ns, 53.8414 us/op
+WorkloadPilot   10: 8192 op, 441993000.00 ns, 53.9542 us/op
+WorkloadPilot   11: 16384 op, 879594400.00 ns, 53.6862 us/op
+
+OverheadWarmup   1: 16384 op, 30100.00 ns, 1.8372 ns/op
+OverheadWarmup   2: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadWarmup   3: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadWarmup   4: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadWarmup   5: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadWarmup   6: 16384 op, 27000.00 ns, 1.6479 ns/op
+
+OverheadActual   1: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadActual   2: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadActual   3: 16384 op, 27100.00 ns, 1.6541 ns/op
+OverheadActual   4: 16384 op, 26700.00 ns, 1.6296 ns/op
+OverheadActual   5: 16384 op, 27900.00 ns, 1.7029 ns/op
+OverheadActual   6: 16384 op, 27200.00 ns, 1.6602 ns/op
+OverheadActual   7: 16384 op, 27000.00 ns, 1.6479 ns/op
+OverheadActual   8: 16384 op, 27200.00 ns, 1.6602 ns/op
+OverheadActual   9: 16384 op, 27000.00 ns, 1.6479 ns/op
+OverheadActual  10: 16384 op, 27200.00 ns, 1.6602 ns/op
+OverheadActual  11: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadActual  12: 16384 op, 26800.00 ns, 1.6357 ns/op
+OverheadActual  13: 16384 op, 27600.00 ns, 1.6846 ns/op
+OverheadActual  14: 16384 op, 27600.00 ns, 1.6846 ns/op
+OverheadActual  15: 16384 op, 27900.00 ns, 1.7029 ns/op
+
+WorkloadWarmup   1: 16384 op, 878122000.00 ns, 53.5963 us/op
+WorkloadWarmup   2: 16384 op, 877267900.00 ns, 53.5442 us/op
+WorkloadWarmup   3: 16384 op, 878778500.00 ns, 53.6364 us/op
+WorkloadWarmup   4: 16384 op, 882099700.00 ns, 53.8391 us/op
+WorkloadWarmup   5: 16384 op, 877907000.00 ns, 53.5832 us/op
+WorkloadWarmup   6: 16384 op, 876856900.00 ns, 53.5191 us/op
+WorkloadWarmup   7: 16384 op, 878611700.00 ns, 53.6262 us/op
+WorkloadWarmup   8: 16384 op, 877076300.00 ns, 53.5325 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 878842100.00 ns, 53.6403 us/op
+WorkloadActual   2: 16384 op, 877494300.00 ns, 53.5580 us/op
+WorkloadActual   3: 16384 op, 877391000.00 ns, 53.5517 us/op
+WorkloadActual   4: 16384 op, 877167200.00 ns, 53.5380 us/op
+WorkloadActual   5: 16384 op, 877633000.00 ns, 53.5665 us/op
+WorkloadActual   6: 16384 op, 877225200.00 ns, 53.5416 us/op
+WorkloadActual   7: 16384 op, 876750600.00 ns, 53.5126 us/op
+WorkloadActual   8: 16384 op, 877890500.00 ns, 53.5822 us/op
+WorkloadActual   9: 16384 op, 876722200.00 ns, 53.5109 us/op
+WorkloadActual  10: 16384 op, 876828100.00 ns, 53.5173 us/op
+WorkloadActual  11: 16384 op, 877379600.00 ns, 53.5510 us/op
+WorkloadActual  12: 16384 op, 876150200.00 ns, 53.4760 us/op
+WorkloadActual  13: 16384 op, 877193500.00 ns, 53.5396 us/op
+WorkloadActual  14: 16384 op, 876763600.00 ns, 53.5134 us/op
+WorkloadActual  15: 16384 op, 875584600.00 ns, 53.4414 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 877467200.00 ns, 53.5563 us/op
+WorkloadResult   2: 16384 op, 877363900.00 ns, 53.5500 us/op
+WorkloadResult   3: 16384 op, 877140100.00 ns, 53.5364 us/op
+WorkloadResult   4: 16384 op, 877605900.00 ns, 53.5648 us/op
+WorkloadResult   5: 16384 op, 877198100.00 ns, 53.5399 us/op
+WorkloadResult   6: 16384 op, 876723500.00 ns, 53.5110 us/op
+WorkloadResult   7: 16384 op, 877863400.00 ns, 53.5805 us/op
+WorkloadResult   8: 16384 op, 876695100.00 ns, 53.5092 us/op
+WorkloadResult   9: 16384 op, 876801000.00 ns, 53.5157 us/op
+WorkloadResult  10: 16384 op, 877352500.00 ns, 53.5493 us/op
+WorkloadResult  11: 16384 op, 876123100.00 ns, 53.4743 us/op
+WorkloadResult  12: 16384 op, 877166400.00 ns, 53.5380 us/op
+WorkloadResult  13: 16384 op, 876736500.00 ns, 53.5117 us/op
+WorkloadResult  14: 16384 op, 875557500.00 ns, 53.4398 us/op
+
+// AfterAll
+// Benchmark Process 12452 has exited with code 0
+
+Mean = 53.527 us, StdErr = 0.010 us (0.02%), N = 14, StdDev = 0.037 us
+Min = 53.440 us, Q1 = 53.511 us, Median = 53.537 us, Q3 = 53.550 us, Max = 53.581 us
+IQR = 0.039 us, LowerFence = 53.453 us, UpperFence = 53.608 us
+ConfidenceInterval = [53.485 us; 53.569 us] (CI 99.9%), Margin = 0.042 us (0.08% of Mean)
+Skewness = -0.78, Kurtosis = 2.92, MValue = 2
+
+// **************************
+// Benchmark: BechmarkClass.'Search for a string in a hashSet ': DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "50b50d8b-a2f2-422f-b220-7895e611aaf1.dll" --benchmarkName "HashSet.BechmarkClass.SearchHash" --job "Default" --benchmarkId 1 in C:\Users\akradioman3\source\repos\HashSet\bin\Release\netcoreapp3.1\50b50d8b-a2f2-422f-b220-7895e611aaf1\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 239600.00 ns, 239.6000 us/op
+WorkloadJitting  1: 1 op, 12804500.00 ns, 12.8045 ms/op
+
+OverheadJitting  2: 16 op, 238700.00 ns, 14.9187 us/op
+WorkloadJitting  2: 16 op, 239500.00 ns, 14.9688 us/op
+
+WorkloadPilot    1: 16 op, 2500.00 ns, 156.2500 ns/op
+WorkloadPilot    2: 32 op, 3100.00 ns, 96.8750 ns/op
+WorkloadPilot    3: 64 op, 5000.00 ns, 78.1250 ns/op
+WorkloadPilot    4: 128 op, 8600.00 ns, 67.1875 ns/op
+WorkloadPilot    5: 256 op, 15900.00 ns, 62.1094 ns/op
+WorkloadPilot    6: 512 op, 30500.00 ns, 59.5703 ns/op
+WorkloadPilot    7: 1024 op, 60000.00 ns, 58.5938 ns/op
+WorkloadPilot    8: 2048 op, 118300.00 ns, 57.7637 ns/op
+WorkloadPilot    9: 4096 op, 235300.00 ns, 57.4463 ns/op
+WorkloadPilot   10: 8192 op, 469600.00 ns, 57.3242 ns/op
+WorkloadPilot   11: 16384 op, 937400.00 ns, 57.2144 ns/op
+WorkloadPilot   12: 32768 op, 1875600.00 ns, 57.2388 ns/op
+WorkloadPilot   13: 65536 op, 3748400.00 ns, 57.1960 ns/op
+WorkloadPilot   14: 131072 op, 7492700.00 ns, 57.1648 ns/op
+WorkloadPilot   15: 262144 op, 14997900.00 ns, 57.2124 ns/op
+WorkloadPilot   16: 524288 op, 29964700.00 ns, 57.1531 ns/op
+WorkloadPilot   17: 1048576 op, 60077900.00 ns, 57.2948 ns/op
+WorkloadPilot   18: 2097152 op, 99202300.00 ns, 47.3033 ns/op
+WorkloadPilot   19: 4194304 op, 146983200.00 ns, 35.0435 ns/op
+WorkloadPilot   20: 8388608 op, 293357000.00 ns, 34.9709 ns/op
+WorkloadPilot   21: 16777216 op, 587833300.00 ns, 35.0376 ns/op
+
+OverheadWarmup   1: 16777216 op, 28870700.00 ns, 1.7208 ns/op
+OverheadWarmup   2: 16777216 op, 28894300.00 ns, 1.7222 ns/op
+OverheadWarmup   3: 16777216 op, 29499500.00 ns, 1.7583 ns/op
+OverheadWarmup   4: 16777216 op, 28996000.00 ns, 1.7283 ns/op
+OverheadWarmup   5: 16777216 op, 28688200.00 ns, 1.7099 ns/op
+OverheadWarmup   6: 16777216 op, 28864300.00 ns, 1.7204 ns/op
+OverheadWarmup   7: 16777216 op, 28964800.00 ns, 1.7264 ns/op
+OverheadWarmup   8: 16777216 op, 28874200.00 ns, 1.7210 ns/op
+
+OverheadActual   1: 16777216 op, 28822700.00 ns, 1.7180 ns/op
+OverheadActual   2: 16777216 op, 28808700.00 ns, 1.7171 ns/op
+OverheadActual   3: 16777216 op, 28845200.00 ns, 1.7193 ns/op
+OverheadActual   4: 16777216 op, 28819000.00 ns, 1.7177 ns/op
+OverheadActual   5: 16777216 op, 28688400.00 ns, 1.7100 ns/op
+OverheadActual   6: 16777216 op, 28868500.00 ns, 1.7207 ns/op
+OverheadActual   7: 16777216 op, 28720800.00 ns, 1.7119 ns/op
+OverheadActual   8: 16777216 op, 28910400.00 ns, 1.7232 ns/op
+OverheadActual   9: 16777216 op, 28842200.00 ns, 1.7191 ns/op
+OverheadActual  10: 16777216 op, 28671000.00 ns, 1.7089 ns/op
+OverheadActual  11: 16777216 op, 28784700.00 ns, 1.7157 ns/op
+OverheadActual  12: 16777216 op, 28784900.00 ns, 1.7157 ns/op
+OverheadActual  13: 16777216 op, 29105200.00 ns, 1.7348 ns/op
+OverheadActual  14: 16777216 op, 28698400.00 ns, 1.7106 ns/op
+OverheadActual  15: 16777216 op, 28837500.00 ns, 1.7188 ns/op
+
+WorkloadWarmup   1: 16777216 op, 588886700.00 ns, 35.1004 ns/op
+WorkloadWarmup   2: 16777216 op, 589763400.00 ns, 35.1526 ns/op
+WorkloadWarmup   3: 16777216 op, 589664400.00 ns, 35.1467 ns/op
+WorkloadWarmup   4: 16777216 op, 589505300.00 ns, 35.1373 ns/op
+WorkloadWarmup   5: 16777216 op, 588738500.00 ns, 35.0915 ns/op
+WorkloadWarmup   6: 16777216 op, 589378900.00 ns, 35.1297 ns/op
+WorkloadWarmup   7: 16777216 op, 588865800.00 ns, 35.0991 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 16777216 op, 587062100.00 ns, 34.9916 ns/op
+WorkloadActual   2: 16777216 op, 587246300.00 ns, 35.0026 ns/op
+WorkloadActual   3: 16777216 op, 586437700.00 ns, 34.9544 ns/op
+WorkloadActual   4: 16777216 op, 586837700.00 ns, 34.9783 ns/op
+WorkloadActual   5: 16777216 op, 586870200.00 ns, 34.9802 ns/op
+WorkloadActual   6: 16777216 op, 586701200.00 ns, 34.9701 ns/op
+WorkloadActual   7: 16777216 op, 586795600.00 ns, 34.9757 ns/op
+WorkloadActual   8: 16777216 op, 587072400.00 ns, 34.9922 ns/op
+WorkloadActual   9: 16777216 op, 586641200.00 ns, 34.9665 ns/op
+WorkloadActual  10: 16777216 op, 587478700.00 ns, 35.0165 ns/op
+WorkloadActual  11: 16777216 op, 587090300.00 ns, 34.9933 ns/op
+WorkloadActual  12: 16777216 op, 586912600.00 ns, 34.9827 ns/op
+WorkloadActual  13: 16777216 op, 586828100.00 ns, 34.9777 ns/op
+WorkloadActual  14: 16777216 op, 586913200.00 ns, 34.9828 ns/op
+WorkloadActual  15: 16777216 op, 586444000.00 ns, 34.9548 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 16777216 op, 558243100.00 ns, 33.2739 ns/op
+WorkloadResult   2: 16777216 op, 558427300.00 ns, 33.2849 ns/op
+WorkloadResult   3: 16777216 op, 557618700.00 ns, 33.2367 ns/op
+WorkloadResult   4: 16777216 op, 558018700.00 ns, 33.2605 ns/op
+WorkloadResult   5: 16777216 op, 558051200.00 ns, 33.2624 ns/op
+WorkloadResult   6: 16777216 op, 557882200.00 ns, 33.2524 ns/op
+WorkloadResult   7: 16777216 op, 557976600.00 ns, 33.2580 ns/op
+WorkloadResult   8: 16777216 op, 558253400.00 ns, 33.2745 ns/op
+WorkloadResult   9: 16777216 op, 557822200.00 ns, 33.2488 ns/op
+WorkloadResult  10: 16777216 op, 558659700.00 ns, 33.2987 ns/op
+WorkloadResult  11: 16777216 op, 558271300.00 ns, 33.2756 ns/op
+WorkloadResult  12: 16777216 op, 558093600.00 ns, 33.2650 ns/op
+WorkloadResult  13: 16777216 op, 558009100.00 ns, 33.2599 ns/op
+WorkloadResult  14: 16777216 op, 558094200.00 ns, 33.2650 ns/op
+WorkloadResult  15: 16777216 op, 557625000.00 ns, 33.2370 ns/op
+
+// AfterAll
+// Benchmark Process 6952 has exited with code 0
+
+Mean = 33.264 ns, StdErr = 0.004 ns (0.01%), N = 15, StdDev = 0.017 ns
+Min = 33.237 ns, Q1 = 33.255 ns, Median = 33.262 ns, Q3 = 33.274 ns, Max = 33.299 ns
+IQR = 0.019 ns, LowerFence = 33.227 ns, UpperFence = 33.303 ns
+ConfidenceInterval = [33.246 ns; 33.281 ns] (CI 99.9%), Margin = 0.018 ns (0.05% of Mean)
+Skewness = 0.21, Kurtosis = 2.47, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\HashSet.BechmarkClass-report.csv
+  BenchmarkDotNet.Artifacts\results\HashSet.BechmarkClass-report-github.md
+  BenchmarkDotNet.Artifacts\results\HashSet.BechmarkClass-report.html
+
+// * Detailed results *
+BechmarkClass.'Search for a string in an array of strings ': DefaultJob
+Runtime = .NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 53.527 us, StdErr = 0.010 us (0.02%), N = 14, StdDev = 0.037 us
+Min = 53.440 us, Q1 = 53.511 us, Median = 53.537 us, Q3 = 53.550 us, Max = 53.581 us
+IQR = 0.039 us, LowerFence = 53.453 us, UpperFence = 53.608 us
+ConfidenceInterval = [53.485 us; 53.569 us] (CI 99.9%), Margin = 0.042 us (0.08% of Mean)
+Skewness = -0.78, Kurtosis = 2.92, MValue = 2
+-------------------- Histogram --------------------
+[53.420 us ; 53.601 us) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+BechmarkClass.'Search for a string in a hashSet ': DefaultJob
+Runtime = .NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 33.264 ns, StdErr = 0.004 ns (0.01%), N = 15, StdDev = 0.017 ns
+Min = 33.237 ns, Q1 = 33.255 ns, Median = 33.262 ns, Q3 = 33.274 ns, Max = 33.299 ns
+IQR = 0.019 ns, LowerFence = 33.227 ns, UpperFence = 33.303 ns
+ConfidenceInterval = [33.246 ns; 33.281 ns] (CI 99.9%), Margin = 0.018 ns (0.05% of Mean)
+Skewness = 0.21, Kurtosis = 2.47, MValue = 2
+-------------------- Histogram --------------------
+[33.228 ns ; 33.308 ns) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.1, OS=Windows 10.0.19041.746 (2004/?/20H1)
+Intel Core i5-4460 CPU 3.20GHz (Haswell), 1 CPU, 4 logical and 4 physical cores
+.NET Core SDK=5.0.102
+  [Host]     : .NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT
+  DefaultJob : .NET Core 3.1.11 (CoreCLR 4.700.20.56602, CoreFX 4.700.20.56604), X64 RyuJIT
+
+
+|                                        Method |         Mean |     Error |    StdDev |
+|---------------------------------------------- |-------------:|----------:|----------:|
+| 'Search for a string in an array of strings ' | 53,526.93 ns | 41.834 ns | 37.085 ns |
+|           'Search for a string in a hashSet ' |     33.26 ns |  0.018 ns |  0.017 ns |
+
+// * Hints *
+Outliers
+  BechmarkClass.'Search for a string in an array of strings ': Default -> 1 outlier  was  removed, 2 outliers were detected (53.44 us, 53.64 us)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:37 (37.77 sec), executed benchmarks: 2
+
+Global total time: 00:00:42 (42.16 sec), executed benchmarks: 2
+// * Artifacts cleanup *
